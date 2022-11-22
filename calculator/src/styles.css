@@ -18,6 +18,8 @@ body{
 }
 
 .headline{
+    display: block;
+        text-align: center;
     font-size: 3.5rem;
     font-weight: bold;
     filter: drop-shadow(0.3rem 0.3rem 0.35rem #FF9500);
@@ -96,4 +98,22 @@ body{
 .output .curr-op{
     color: white;
     font-size:2.5rem;
+}
+
+@media screen and (max-width:450px) {
+    .headline{
+        font-size: 2rem;
+        display: block;
+        text-align: center;
+    }
+
+    .calc-grid{
+        grid-template-columns: repeat(4,4rem);
+        grid-template-rows: minmax(7rem,auto) repeat(5,4rem);
+    }
+
+.calc-grid > button {
+    font-size: 1.4rem;
+}
+
 }
