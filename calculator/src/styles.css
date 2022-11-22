@@ -4,10 +4,16 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+  }
+
 body{
+    display: flex;
+    justify-content: center;
     font-family: 'Poppins';
     margin: 0;
-    height: 81em;
+    min-height: 100%;
     background: linear-gradient(to bottom,#D4D4D2,#232323) no-repeat;
 }
 
