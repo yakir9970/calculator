@@ -49,17 +49,17 @@ body{
 
 /*hover&focus*/
 .light:hover,
-.light:focus{
+.light:active{
     background-Color: #ffffff;
 }
 
 .orange:hover,
-.orange:focus{
+.orange:active{
     background-color: #e2b97e;
 }
 
 .dark:hover,
-.dark:focus{
+.dark:active{
     background-color: #838282;
 }
 
@@ -68,7 +68,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: .75rem;
     word-wrap: break-word;
     word-break: break-all;
