@@ -7,6 +7,14 @@
 body{
     font-family: 'Poppins';
     margin: 0;
+    height: 81em;
+    background: linear-gradient(to bottom,#D4D4D2,#232323) no-repeat;
+}
+
+.headline{
+    font-size: 3.5rem;
+    font-weight: bold;
+    filter: drop-shadow(0.3rem 0.3rem 0.35rem #FF9500);
 }
 
 .calc-grid{

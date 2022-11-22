@@ -157,57 +157,60 @@ function App() {
     {}
   );
   return (
-    <div className="calc-grid">
-      <div className="output">
-        <div className="prev-op">
-          {formatOperand(previousOperand)} {operation}
+    <>
+      <div className="headline">My Calculator!</div>
+      <div className="calc-grid">
+        <div className="output">
+          <div className="prev-op">
+            {formatOperand(previousOperand)} {operation}
+          </div>
+          <div className="curr-op">{formatOperand(currentOperand)}</div>
         </div>
-        <div className="curr-op">{formatOperand(currentOperand)}</div>
+        <button
+          className="span-two light"
+          onClick={() => dispatch({ type: ACTIONS.CLEAR })}
+        >
+          AC
+        </button>
+        <button
+          className="light"
+          onClick={() => dispatch({ type: ACTIONS.DELETE_DIGIT })}
+        >
+          DEL
+        </button>
+        <OperationButton className="orange" operation="÷" dispatch={dispatch}>
+          ÷
+        </OperationButton>
+        <DigitButton className="dark" digit="7" dispatch={dispatch} />
+        <DigitButton className="dark" digit="8" dispatch={dispatch} />
+        <DigitButton className="dark" digit="9" dispatch={dispatch} />
+        <OperationButton className="orange" operation="x" dispatch={dispatch}>
+          x
+        </OperationButton>
+        <DigitButton className="dark" digit="4" dispatch={dispatch} />
+        <DigitButton className="dark" digit="5" dispatch={dispatch} />
+        <DigitButton className="dark" digit="6" dispatch={dispatch} />
+        <OperationButton className="orange" operation="-" dispatch={dispatch}>
+          -
+        </OperationButton>
+        <DigitButton className="dark" digit="1" dispatch={dispatch} />
+        <DigitButton className="dark" digit="2" dispatch={dispatch} />
+        <DigitButton className="dark" digit="3" dispatch={dispatch} />
+        <OperationButton className="orange" operation="+" dispatch={dispatch}>
+          +
+        </OperationButton>
+        <DigitButton className="dark" digit="0" dispatch={dispatch} />
+        <DigitButton className="dark" digit="." dispatch={dispatch} />
+        <button
+          className="span-two orange"
+          operation="="
+          dispatch={dispatch}
+          onClick={() => dispatch({ type: ACTIONS.EVALUATE })}
+        >
+          =
+        </button>
       </div>
-      <button
-        className="span-two light"
-        onClick={() => dispatch({ type: ACTIONS.CLEAR })}
-      >
-        AC
-      </button>
-      <button
-        className="light"
-        onClick={() => dispatch({ type: ACTIONS.DELETE_DIGIT })}
-      >
-        DEL
-      </button>
-      <OperationButton className="orange" operation="÷" dispatch={dispatch}>
-        ÷
-      </OperationButton>
-      <DigitButton className="dark" digit="7" dispatch={dispatch} />
-      <DigitButton className="dark" digit="8" dispatch={dispatch} />
-      <DigitButton className="dark" digit="9" dispatch={dispatch} />
-      <OperationButton className="orange" operation="x" dispatch={dispatch}>
-        x
-      </OperationButton>
-      <DigitButton className="dark" digit="4" dispatch={dispatch} />
-      <DigitButton className="dark" digit="5" dispatch={dispatch} />
-      <DigitButton className="dark" digit="6" dispatch={dispatch} />
-      <OperationButton className="orange" operation="-" dispatch={dispatch}>
-        -
-      </OperationButton>
-      <DigitButton className="dark" digit="1" dispatch={dispatch} />
-      <DigitButton className="dark" digit="2" dispatch={dispatch} />
-      <DigitButton className="dark" digit="3" dispatch={dispatch} />
-      <OperationButton className="orange" operation="+" dispatch={dispatch}>
-        +
-      </OperationButton>
-      <DigitButton className="dark" digit="0" dispatch={dispatch} />
-      <DigitButton className="dark" digit="." dispatch={dispatch} />
-      <button
-        className="span-two orange"
-        operation="="
-        dispatch={dispatch}
-        onClick={() => dispatch({ type: ACTIONS.EVALUATE })}
-      >
-        =
-      </button>
-    </div>
+    </>
   );
 }
 
